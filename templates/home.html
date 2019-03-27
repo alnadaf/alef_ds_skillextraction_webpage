@@ -1,0 +1,58 @@
+
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<img src="../static/img/logo.png" alt="Alef Education Logo" align="left" width="210" height="70">
+
+		<div class="container">
+		<h2 id="brandname" align="center">
+			Skill Extraction App
+		</h2>
+
+
+	</div>
+	</header>
+	<br />
+    		<h2>Extracting skills of Mathematics contents</h2>
+
+	<div class="ml-container">
+
+        <form action="{{ url_for('extract')}}" method="POST">
+		<p>Enter Your Title Here:</p>
+		<!-- <input type="text" name="comment"/> -->
+		<div align="center">
+			<textarea name="title" rows="1" cols="270" align="center" >Please put your lesson title</textarea>
+			</div>
+		<br/>
+
+		<form action="{{ url_for('extract')}}" method="POST">
+		<p>Enter Your Content Here:</p>
+		<!-- <input type="text" name="comment"/> -->
+			<div align="center">
+		<textarea name="message" rows="20" cols="270">Please write your math content</textarea>
+			</div>
+		<br/>
+			<p>Number of recommendations:</p>
+		<!-- <input type="text" name="comment"/> -->
+			<div>
+		<textarea name="num" rows="1" cols="5">10</textarea>
+			</div>
+		<br/>
+
+		<input type="submit" class="btn-info" value="Extract">
+
+	</form>
+
+	</div>
+
+
+
+
+</body>
+</html>
